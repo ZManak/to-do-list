@@ -54,7 +54,7 @@ class ToDoList extends Component {
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="name">New Item: </label>
           <input type="text" id="name" />
-          <input type="submit" value="Add" />
+          <input type="submit" value="ADD" />
         </form>
       </article>
       <br />
