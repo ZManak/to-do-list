@@ -4,7 +4,7 @@ import './Header.css'
 class Header extends Component {
   render() {
     return <header>
-      <h1>TO DO LIST</h1>
+      <h1>WELCOME TO MY REACT WEB</h1>
     </header>
   }
 }
