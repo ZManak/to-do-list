@@ -5,14 +5,15 @@ class Card extends Component {
     super(props)
 
     this.state = {
-      card: this.props.cards
+      cards: this.props.cards
     }
   }
+
   render() {
     return (
     <article className="itemCard">
-      <p>Hello</p>
-      <p>{this.props.card}</p>
+      <p>Weather</p>
+      <p>{this.props.cards.name}</p>
   </article>)
   }
 }
