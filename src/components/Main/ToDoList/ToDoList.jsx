@@ -47,6 +47,10 @@ class ToDoList extends Component {
 
   }
 
+  componentDidMount() {
+
+  }
+  
   render() {
     return <section>
       <article>
