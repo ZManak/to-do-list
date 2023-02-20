@@ -13,7 +13,7 @@ class ToDoList extends Component {
       items: data
     }
   }
-  
+
   deleteItem = (i) =>{
     const remainingItems = this.state.items.filter((item, j) => i !== j);
     this.setState({items: remainingItems})
@@ -27,11 +27,11 @@ class ToDoList extends Component {
     this.setState({ items: data })
   }
 
-  printItems = () => 
+  printItems = () =>
     <section className="list">
       {this.state.items.map((item, i) => <ToDoItem data={item} remove={() => this.deleteItem(i)} key={Math.random()} />)}
     </section>
-  
+
 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -41,26 +41,30 @@ class ToDoList extends Component {
 
     console.log(newItem)
 
-    this.setState({items: [...this.state.items, newItem]});
+    this.setState({ items: [newItem, ...this.state.items]});
 
     event.target.reset();
 
   }
 
+  componentDidMount() {
+
+  }
+  
   render() {
     return <section>
       <article>
         <h2>Add Item</h2>
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="name">New Item: </label>
-          <input type="text" id="name" />
+          <input type="text" id="name" placeholder="insert text..."/>
           <input type="submit" value="ADD" />
         </form>
       </article>
       <br />
         {this.printItems()}
 
-      
+
       <br />
 
       <article className="buttons">
